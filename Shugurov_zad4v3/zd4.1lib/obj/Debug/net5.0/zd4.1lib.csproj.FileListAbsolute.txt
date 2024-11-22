@@ -1,0 +1,12 @@
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\bin\Debug\net5.0\zd4.1lib.deps.json
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\bin\Debug\net5.0\zd4.1lib.dll
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\bin\Debug\net5.0\ref\zd4.1lib.dll
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\bin\Debug\net5.0\zd4.1lib.pdb
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\obj\Debug\net5.0\zd4.1lib.csproj.AssemblyReference.cache
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\obj\Debug\net5.0\zd4.1lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\obj\Debug\net5.0\zd4.1lib.AssemblyInfoInputs.cache
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\obj\Debug\net5.0\zd4.1lib.AssemblyInfo.cs
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\obj\Debug\net5.0\zd4.1lib.csproj.CoreCompileInputs.cache
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\obj\Debug\net5.0\zd4.1lib.dll
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\obj\Debug\net5.0\ref\zd4.1lib.dll
+C:\Users\305-8\Documents\Кузьмин Пр-21\zd4.1lib\obj\Debug\net5.0\zd4.1lib.pdb

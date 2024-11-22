@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shugu\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Rubtsova_UP\\Rubtsova_zad1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8430178-66AB-45E1-AFA3-46EBB0FD66E0}|Test_zad1\\Test_zad1.csproj|C:\\Users\\shugu\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Rubtsova_UP\\Rubtsova_zad1\\test_zad1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8430178-66AB-45E1-AFA3-46EBB0FD66E0}|Test_zad1\\Test_zad1.csproj|solutionrelative:test_zad1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C067603E-92C2-4C65-951B-1C0B710FDDE0}|Shugurov_zad4v1\\Shugurov_zad4v1.csproj|c:\\users\\shugu\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\rubtsova_up\\rubtsova_zad1\\shugurov_zad4v1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C067603E-92C2-4C65-951B-1C0B710FDDE0}|Shugurov_zad4v1\\Shugurov_zad4v1.csproj|solutionrelative:shugurov_zad4v1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\shugu\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Rubtsova_UP\\Rubtsova_zad1\\Shugurov_zad4v1\\Program.cs",
+              "RelativeDocumentMoniker": "Shugurov_zad4v1\\Program.cs",
+              "ToolTip": "C:\\Users\\shugu\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Rubtsova_UP\\Rubtsova_zad1\\Shugurov_zad4v1\\Program.cs",
+              "RelativeToolTip": "Shugurov_zad4v1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:27:20.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\shugu\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Rubtsova_UP\\Rubtsova_zad1\\Test_zad1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "Test_zad1\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\shugu\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Rubtsova_UP\\Rubtsova_zad1\\Test_zad1\\UnitTest1.cs",
+              "RelativeToolTip": "Test_zad1\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T14:15:38.223Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
