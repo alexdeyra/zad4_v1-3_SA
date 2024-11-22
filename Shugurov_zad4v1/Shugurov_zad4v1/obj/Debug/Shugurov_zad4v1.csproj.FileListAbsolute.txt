@@ -1,14 +1,14 @@
-C:\Users\User\Desktop\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\bin\Debug\Rubtsova_zad1.exe.config
-C:\Users\User\Desktop\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\bin\Debug\Rubtsova_zad1.exe
-C:\Users\User\Desktop\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\bin\Debug\Rubtsova_zad1.pdb
-C:\Users\User\Desktop\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\obj\Debug\Rubtsova_zad1.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\obj\Debug\Rubtsova_zad1.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\obj\Debug\Rubtsova_zad1.exe
-C:\Users\User\Desktop\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\obj\Debug\Rubtsova_zad1.pdb
-C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Shugurov_zad4v1\bin\Debug\Rubtsova_zad1.exe.config
-C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Shugurov_zad4v1\bin\Debug\Rubtsova_zad1.exe
-C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Shugurov_zad4v1\bin\Debug\Rubtsova_zad1.pdb
-C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Shugurov_zad4v1\obj\Debug\Shugurov_zad4v1.csproj.AssemblyReference.cache
-C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Shugurov_zad4v1\obj\Debug\Shugurov_zad4v1.csproj.CoreCompileInputs.cache
-C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Shugurov_zad4v1\obj\Debug\Rubtsova_zad1.exe
-C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Shugurov_zad4v1\obj\Debug\Rubtsova_zad1.pdb
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\bin\Debug\Rubtsova_zad1.exe.config
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\bin\Debug\Rubtsova_zad1.exe
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\bin\Debug\Rubtsova_zad1.pdb
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\obj\Debug\Shugurov_zad4v1.csproj.AssemblyReference.cache
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\obj\Debug\Shugurov_zad4v1.csproj.CoreCompileInputs.cache
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\obj\Debug\Rubtsova_zad1.exe
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Rubtsova_zad1\Rubtsova_zad1\obj\Debug\Rubtsova_zad1.pdb
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Shugurov_zad4v1\Shugurov_zad4v1\bin\Debug\Rubtsova_zad1.exe.config
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Shugurov_zad4v1\Shugurov_zad4v1\bin\Debug\Rubtsova_zad1.exe
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Shugurov_zad4v1\Shugurov_zad4v1\bin\Debug\Rubtsova_zad1.pdb
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Shugurov_zad4v1\Shugurov_zad4v1\obj\Debug\Shugurov_zad4v1.csproj.AssemblyReference.cache
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Shugurov_zad4v1\Shugurov_zad4v1\obj\Debug\Shugurov_zad4v1.csproj.CoreCompileInputs.cache
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Shugurov_zad4v1\Shugurov_zad4v1\obj\Debug\Rubtsova_zad1.exe
+C:\Users\shugu\OneDrive\Рабочий стол\Rubtsova_UP\Shugurov_zad4v1\Shugurov_zad4v1\obj\Debug\Rubtsova_zad1.pdb

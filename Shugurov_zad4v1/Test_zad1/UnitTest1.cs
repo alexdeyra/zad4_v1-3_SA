@@ -8,48 +8,61 @@ namespace Test_zad1
     [TestClass]
     public class CostCalculationTests
     {
-        
+
         private const string InputFilePath = "input.txt";
         private const string OutputFilePath = "output.txt";
 
         private void WriteInputFile(string content)
         {
+            // Записывает содержимое в файл входных данных
             File.WriteAllText(InputFilePath, content);
         }
 
+
         private string ReadOutputFile()
         {
+            // Читает и возвращает содержимое выходного файла
             return File.ReadAllText(OutputFilePath);
         }
 
-        //программа правильно вычисляет стоимость при максимально допустимых параметрах
-        [TestMethod]
-        public void Test_CorrectCostWithMaxValidParameters()
+        // Проверяет, правильно ли программа вычисляет стоимость с высокой стоимостью за минуту
+        /*1*/ [TestMethod]
+        public void Test_CalculateCostWithHighPerMinuteCost()
         {
-            WriteInputFile("100 10 10 200");
-            Program.Main(); // Проверяем, что метод правильно обрабатывает входные данные
-            Assert.AreEqual("1000", ReadOutputFile());  // Ожидаем, что стоимость будет 1000
+            WriteInputFile("10 10 10 10"); // Записываем входные данные с высокой стоимостью за минуту
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("100", ReadOutputFile()); // Ожидаем, что стоимость будет 100 (10 + 9*10)
         }
 
-        //программа правильно обрабатывает минимальные параметры.
-        [TestMethod]
-        public void Test_CorrectCostWithMinimumParameters()
+        // Проверяет, правильно ли программа обрабатывает случай, когда все минуты бесплатны
+       /*1*/ [TestMethod]
+        public void Test_CalculateCostWithAllMinutesFree()
         {
-            WriteInputFile("2 0 0 1");
+            WriteInputFile("10 0 0 10"); // Записываем входные данные, где все минуты бесплатны
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("0", ReadOutputFile()); // Ожидаем, что стоимость будет 0 (все минуты бесплатные)
+        }
+
+        // Проверяет обработку отрицательного количества минут
+        /*1*/[TestMethod]
+        public void Test_HandleNegativeMinutesInput()
+        {
+            WriteInputFile("-1 10 10 1"); // Записываем входные данные с отрицательными минутами
             Program.Main();
-            Assert.AreEqual("0", ReadOutputFile());
+            Assert.AreEqual("Некорректные входные данные", ReadOutputFile()); // Ожидаем сообщение об ошибке
         }
 
-        //Это последний случай, когда нет платных минут
+
+        // Проверяет случай, когда нет платных минут
         [TestMethod]
-        public void Test_CorrectCostWithNoPaidMinutes()
+        public void Test_CalculateCostWithNoPaidMinutes()
         {
-            WriteInputFile("10 10 0 5");
-            Program.Main(); 
-            Assert.AreEqual("10", ReadOutputFile());
+            WriteInputFile("10 10 0 5"); // Записываем входные данные, где нет платных минут
+            Program.Main();
+            Assert.AreEqual("10", ReadOutputFile()); // Ожидаем, что стоимость будет 10
         }
 
-        // программа правильно обработает случай, когда все затраты будут равными
+        // Проверяет случай, когда все затраты будут равными
         [TestMethod]
         public void Test_CorrectCostWithMaxMinutesAndZeroCost()
         {
@@ -58,151 +71,143 @@ namespace Test_zad1
             Assert.AreEqual("0", ReadOutputFile());
         }
 
-        //программа корректно обрабатывает отрицательное количество минут
-        [TestMethod]
-        public void Test_IncorrectInputNegativeMinutes()
+        // Проверяет, правильно ли программа обрабатывает случай, когда K превышает максимальное значение
+        /*1*/[TestMethod]
+        public void Test_HandleExceedingMaxKValue()
         {
-            WriteInputFile("-1 10 10 1");
-            Program.Main();
-            Assert.AreEqual("Некорректные входные данные", ReadOutputFile());
+            WriteInputFile("5 10 10 201"); // Записываем входные данные с превышением максимального значения K
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("Некорректные входные данные", ReadOutputFile()); // Ожидаем сообщение об ошибке
         }
 
-        //программа правильно обрабатывает случай, когда количество минут достигает максимального значения.
-        [TestMethod]
-        public void Test_IncorrectInputExceedingMaxMinutes()
+        // Проверяет, правильно ли программа вычисляет стоимость, когда K равно N с высокой стоимостью за минуту
+        /*1*/ [TestMethod]
+        public void Test_CalculateCostWithKEqualToNAndMaxCostPerMinute()
         {
-            WriteInputFile("101 10 10 1");
-            Program.Main();
-            Assert.AreEqual("Некорректные входные данные", ReadOutputFile());
+            WriteInputFile("10 5 5 10"); // Записываем входные данные, где K равно N и высокая стоимость за минуту
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("50", ReadOutputFile()); // Ожидаем, что стоимость будет 50 (5 + 9*5)
+        } 
+
+        // Проверяет, правильно ли программа обрабатывает случай, когда начальная стоимость превышает максимальное значение
+        [TestMethod]
+        public void Test_HandleExceedingMaxInitialCost()
+        {
+            WriteInputFile("5 11 10 1"); // Записываем входные данные с превышением максимальной стоимости
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("Некорректные входные данные", ReadOutputFile()); // Ожидаем сообщение об ошибке
         }
 
-        //программа корректно обрабатывает низкую начальную стоимость
+        // Проверяет, правильно ли программа обрабатывает низкую стоимость за минуту
         [TestMethod]
-        public void Test_IncorrectInputNegativeCostA()
+        public void Test_HandleNegativeCostPerMinute()
         {
-            WriteInputFile("5 -1 10 1");
-            Program.Main();
-            Assert.AreEqual("Некорректные входные данные", ReadOutputFile());
+            WriteInputFile("5 10 -1 1"); // Записываем входные данные с отрицательной стоимостью за минуту
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("Некорректные входные данные", ReadOutputFile()); // Ожидаем сообщение об ошибке
         }
 
-        // программа правильно обработала случай, когда начальная стоимость составила наибольшее значение
+        // Проверяет, правильно ли программа обрабатывает случай, когда стоимость за минуту превышает максимальное значение
         [TestMethod]
-        public void Test_IncorrectInputExceedingMaxCostA()
+        public void Test_HandleExceedingMaxCostPerMinute()
         {
-            WriteInputFile("5 11 10 1");
-            Program.Main();
-            Assert.AreEqual("Некорректные входные данные", ReadOutputFile());
+            WriteInputFile("5 10 11 1"); // Записываем входные данные с превышением максимальной стоимости за минуту
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("Некорректные входные данные", ReadOutputFile()); // Ожидаем сообщение об ошибке
         }
 
-        //программа корректно обрабатывает низкую стоимость за минуту.
+        // Проверяет, правильно ли программа обрабатывает отрицательное значение K (количество минут общения)
         [TestMethod]
-        public void Test_IncorrectInputNegativeCostB()
+        public void Test_HandleNegativeKValue()
         {
-            WriteInputFile("5 10 -1 1");
-            Program.Main();
-            Assert.AreEqual("Некорректные входные данные", ReadOutputFile());
+            WriteInputFile("5 10 10 -1"); // Записываем входные данные с отрицательным значением K
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("Некорректные входные данные", ReadOutputFile()); // Ожидаем сообщение об ошибке
         }
 
-        //программа правильно обрабатывает случай, когда стоимость за минуту достигает максимального значения
-        [TestMethod]
-        public void Test_IncorrectInputExceedingMaxCostB()
+        // Проверяет, правильно ли программа обрабатывает минимальные параметры
+        /*1*/[TestMethod]
+        public void Test_CalculateCostWithMinimumParameters()
         {
-            WriteInputFile("5 10 11 1");
-            Program.Main();
-            Assert.AreEqual("Некорректные входные данные", ReadOutputFile());
+            WriteInputFile("2 0 0 1"); // Записываем минимальные параметры
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("0", ReadOutputFile()); // Ожидаем, что стоимость будет 0
         }
 
-        //программа корректно обрабатывает отрицательное значение K(количество минут общения)
+        // Проверяет обработку случая, когда количество минут превышает максимальное значение
+        /*1*/
         [TestMethod]
-        public void Test_IncorrectInputNegativeK()
+        public void Test_HandleExceedingMaxMinutesInput()
         {
-            WriteInputFile("5 10 10 -1");
+            WriteInputFile("101 10 10 1"); // Записываем входные данные с превышением максимума
             Program.Main();
-            Assert.AreEqual("Некорректные входные данные", ReadOutputFile());
+            Assert.AreEqual("Некорректные входные данные", ReadOutputFile()); // Ожидаем сообщение об ошибке
         }
 
-        //программа правильно обрабатывает случай, когда K достигает максимального значения
-        [TestMethod]
-        public void Test_IncorrectInputExceedingMaxK()
+        //программа правильно вычисляет стоимость при максимально допустимых параметрах
+       /*1*/ [TestMethod]
+        public void Test_CorrectCostWithMaxValidParameters()
         {
-            WriteInputFile("5 10 10 201");
-            Program.Main();
-            Assert.AreEqual("Некорректные входные данные", ReadOutputFile());
+            WriteInputFile("100 10 10 200");
+            Program.Main(); // Проверяем, что метод правильно обрабатывает входные данные
+            Assert.AreEqual("1000", ReadOutputFile());  // Ожидаем, что стоимость будет 1000
         }
 
-        //программа правильно вычисляет стоимость, когда все минуты платные
-        [TestMethod]
-        public void Test_CorrectCostWithAllPaidMinutes()
+        // Проверяет, правильно ли программа обрабатывает случай, когда все стоимости равны нулю
+        /*1*/[TestMethod]
+        public void Test_CalculateCostWithZeroCosts()
         {
-            WriteInputFile("5 0 3 5");
-            Program.Main();
-            Assert.AreEqual("12", ReadOutputFile()); // 0 + 4*3 = 12
+            WriteInputFile("10 0 0 1"); // Записываем входные данные, где все стоимости равны нулю
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("0", ReadOutputFile()); // Ожидаем, что стоимость будет 0
         }
 
-        //программа правильно вычисляет стоимость, когда K рассчитывает N
+        // Проверяет, правильно ли программа обрабатывает минимальные параметры
+        /*1*/
         [TestMethod]
-        public void Test_CorrectCostWithHighKExceedingN()
+        public void Test_CalculateCostWithMinimumParameterss()
         {
-            WriteInputFile("7 2 1 10");
-            Program.Main();
-            Assert.AreEqual("8", ReadOutputFile()); // 2 + 6*1 = 8
+            WriteInputFile("2 0 0 1"); // Записываем минимальные параметры
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("0", ReadOutputFile()); // Ожидаем, что стоимость будет 0 (первая минута бесплатна)
         }
 
-
-        // программа правильно обработает случай, когда все затраты будут равными
-        [TestMethod]
-        public void Test_CorrectCostWithZeroCostAAndB()
+        // Проверяет, правильно ли программа вычисляет стоимость, когда K равно 2
+        /*1*/[TestMethod]
+        public void Test_CalculateCostWithKEqualToTwoAndHighB()
         {
-            WriteInputFile("10 0 0 1");
-            Program.Main();
-            Assert.AreEqual("0", ReadOutputFile()); // Все стоимости равны нулю
+            WriteInputFile("20 10 10 2"); // Записываем входные данные, где K равно 2
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("20", ReadOutputFile()); // Ожидаем, что стоимость будет 20 (10 + 1*10)
         }
 
-        //программа правильно вычисляет стоимость, когда K равно 2.
-        [TestMethod]
-        public void Test_CorrectCostWithKEqualToTwoAndHighB()
+        // Проверяет, правильно ли программа вычисляет стоимость, когда все минуты платные
+        /*1*/[TestMethod]
+        public void Test_CalculateCostWithAllPaidMinutes()
         {
-            WriteInputFile("20 10 10 2");
-            Program.Main();
-            Assert.AreEqual("20", ReadOutputFile()); // 10 + 1*10 = 20
+            WriteInputFile("5 0 3 5"); // Записываем входные данные, где все минуты платные
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("12", ReadOutputFile()); // Ожидаем, что стоимость будет 12 (0 + 4*3)
         }
 
-        //программа правильно вычисляет стоимость с максимальной стоимостью за минуту
+        // Проверяет обработку низкой начальной стоимости
+        /*1*/
         [TestMethod]
-        public void Test_CorrectCostWithHighAdditionalCost()
+        public void Test_HandleNegativeInitialCostInput()
         {
-            WriteInputFile("10 10 10 10");
+            WriteInputFile("5 -1 10 1"); // Записываем входные данные с отрицательной начальной стоимостью
             Program.Main();
-            Assert.AreEqual("100", ReadOutputFile()); // 10 + 9*10 = 100
+            Assert.AreEqual("Некорректные входные данные", ReadOutputFile()); // Ожидаем сообщение об ошибке
         }
 
-
-        //программа правильно обрабатывает минимальные параметры
-        [TestMethod]
-        public void Test_CorrectCostWithMinimumValidParameters()
+        // Проверяет, правильно ли программа вычисляет стоимость, когда K превышает N
+        /*1*/ [TestMethod]
+        public void Test_CalculateCostWithHighKExceedingN()
         {
-            WriteInputFile("2 0 0 1");
-            Program.Main();
-            Assert.AreEqual("0", ReadOutputFile()); // Первая минута бесплатна, стоимость 0
+            WriteInputFile("7 2 1 10"); // Записываем входные данные, где K превышает N
+            Program.Main(); // Вызываем основной метод программы
+            Assert.AreEqual("8", ReadOutputFile()); // Ожидаем, что стоимость будет 8 (2 + 6*1)
         }
 
-        //программа правильно вычисляет стоимость, когда K равно N с максимальной стоимостью за минуту.
-        [TestMethod]
-        public void Test_CorrectCostWithKEqualToNAndHighCostB()
-        {
-            WriteInputFile("10 5 5 10");
-            Program.Main();
-            Assert.AreEqual("50", ReadOutputFile()); // 5 + 9*5 = 50
-        }
-
-        //программа правильно обрабатывает случай, когда все минуты бесплатны.
-        [TestMethod]
-        public void Test_CorrectCostWithAllFreeMinutes()
-        {
-            WriteInputFile("10 0 0 10");
-            Program.Main();
-            Assert.AreEqual("0", ReadOutputFile()); // Все минуты бесплатные
-        }
-       
     }
- }
+}
